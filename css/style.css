@@ -1,0 +1,128 @@
+@import url('bulma.css');
+
+:root {
+    --primary: #f03a5f;
+    --traparent-primary: #f03a5e98;
+}
+
+* {
+    margin: 0%;
+    scroll-behavior: smooth;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.navbar-item {
+    transition: all 0.3 linear !important;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 0% 2%;
+    text-align: center !important;
+}
+
+.navbar-item:hover {
+    color: var(--primary) !important;
+}
+
+.navbar-item::after {
+    content: "";
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--primary);
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    transition: all 0.3 linear !important;
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+header {
+    background-image: linear-gradient(#0000008e, #3333338e), url('../images/headerimage.jpg');
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 50% 100%, 0 77%);
+    position: relative;
+    top: 0%;
+    transition: all 0.5s linear;
+    background-repeat: repeat !important;
+    overflow: hidden;
+    left: 0%;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.button {
+    position: relative;
+}
+
+.button::after {
+    content: '';
+    width: 60%;
+    height: 150%;
+    position: absolute;
+    background-color: var(--primary);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: -1;
+    top: -0%;
+    left: -0%;
+    transform: scale(0);
+}
+
+.button:hover::after {
+    transition: all 1s;
+    background-color: #fff;
+    /* transition: all 3s; */
+    transform: scale(-100);
+    opacity: 0;
+}
+
+.h1-header {
+    color: #fff;
+}
+
+@media screen and (max-width:760px) {
+    header {
+        background-size: cover;
+    }
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    transition: all 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 2rem #000000;
+    transform: translateY(-10%);
+}
+
+.card header {
+    transition: all 0.3s;
+    box-shadow: 0px 0px 2rem #000000;
+}
+
+.card header:hover {
+    border-radius: 0% 0% 50% 50%/ 0% 0% 100% 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+    transform: scaleX(1.3);
+}
